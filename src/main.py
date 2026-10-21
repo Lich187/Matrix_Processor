@@ -10,7 +10,7 @@ from processing_module import calculate_row_products, save_processed_to_json
 from output_module import load_and_display
 
 def main():
-    print("=== ЗАПУСК ИНТЕГРАЦИИ (Восходящая стратегия) ===")
+    print("=== ЗАПУСК (Ветка master) ===")
     # Имя файла-посредника, через который модули будут общаться
     filename = "matrix_data.json"
 
