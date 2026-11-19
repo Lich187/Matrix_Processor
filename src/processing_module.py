@@ -1,5 +1,6 @@
 import json
 
+
 def calculate_row_products(matrix):
     result = []
     for row in matrix:
@@ -12,6 +13,7 @@ def calculate_row_products(matrix):
         result.append(product)
     return result
 
+
 def save_processed_to_json(vector_b, filename="matrix_data.json"):
     # Открываем файл для записи ("w"). Кодировка utf-8 нужна для корректной работы с текстом.
     with open(filename, "w", encoding="utf-8") as f:
@@ -20,3 +22,16 @@ def save_processed_to_json(vector_b, filename="matrix_data.json"):
         json.dump({"vector_b": vector_b, "stage": "processed"}, f)
     # Выводим сообщение в терминал для проверки, что файл успешно записался.
     print("Модуль обработки: Вектор B сохранен в JSON.")
+
+# Функция проверки валидности матрицы (нужна для комбинаторного покрытия условий)
+
+
+def is_valid_matrix(matrix):
+    # Сложное условие: это список и он не пустой и все элементы внутри - списки
+    if (
+        isinstance(matrix, list)
+        and len(matrix) > 0
+        and all(isinstance(row, list) for row in matrix)
+    ):
+        return True
+    return False

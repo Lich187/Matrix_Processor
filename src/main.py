@@ -9,6 +9,7 @@ from input_module import get_input_matrix, save_input_to_json
 from processing_module import calculate_row_products, save_processed_to_json
 from output_module import load_and_display
 
+
 def main():
     print("=== ЗАПУСК (Ветка master) ===")
     # Имя файла-посредника, через который модули будут общаться
@@ -35,6 +36,7 @@ def main():
     load_and_display(filename)
 
     print("=== ИНТЕГРАЦИЯ ЗАВЕРШЕНА ===")
+
 
 # Эта проверка нужна, чтобы функция main() запускалась только при прямом запуске файла
 if __name__ == "__main__":
